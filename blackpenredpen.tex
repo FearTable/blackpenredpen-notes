@@ -1,0 +1,85 @@
+\documentclass[12pt]{report}
+%\usepackage[fleqn]{amsmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{relsize}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[skip = 2pt, parfill]{parskip}
+\usepackage{blkarray}
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage[small]{titlesec} %"big, medium, small, tiny".
+\usepackage{xfakebold}
+\usepackage{amsthm}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{kpfonts}
+\usepackage{breqn}
+\usepackage[colorlinks=false]{hyperref}
+
+%\hypersetup{
+%	colorlinks,
+%	linkcolor={red!50!black},
+%	citecolor={blue!50!black},
+%	urlcolor={blue!80!black}
+%}
+
+\hypersetup{
+	colorlinks,
+	linkcolor={black},
+	citecolor={black},
+	urlcolor={black}
+}
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	right=20mm,
+	top=15mm,
+}
+
+%\setcounter{secnumdepth}{0}
+%\renewenvironment{proof}{\underline{\ttfamily Proof:}}{\hfill $\Box$ \\} 
+\renewenvironment{proof}{{\fontseries{b}\selectfont Proof:}}{\hfill $\Box$ \\} 
+
+\titlespacing{\chapter}{0pt}{6pt}{3pt}
+\titlespacing{\section}{0pt}{10pt}{3pt}
+\titlespacing{\subsection}{0pt}{6pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{3pt}
+
+%\titleformat*{\chapter}{\ttfamily\fontseries{b}\selectfont\large}
+
+\titleformat{\chapter}[block]
+{\fontseries{b}\selectfont\Large}{\thechapter.}{0.5em}{\fontseries{b}\selectfont\Large}
+\titlespacing*{\chapter}{0pt}{-19pt}{0pt}
+
+%\titleformat*{\section}{\ttfamily\fontseries{b}\selectfont\large}
+%\titleformat*{\subsection}{\ttfamily\fontseries{b}\selectfont\normalsize}
+%\titleformat*{\subsubsection}{\ttfamily\fontseries{b}\selectfont\normalsize}
+
+\titleformat*{\section}{\fontseries{b}\selectfont\large}
+\titleformat*{\subsection}{\fontseries{b}\selectfont\large}
+\titleformat*{\subsubsection}{\fontseries{b}\selectfont\normalsize}
+
+%\titlespacing{\chapter}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+%\usepackage[skip=2pt plus1pt, indent=0pt]{parskip}
+% \usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+%\usepackage[small]{titlesec} % "big, medium, small, tiny".
+
+%\setlength{\abovedisplayskip}{0pt}
+%\setlength{\belowdisplayskip}{0pt}
+
+\begin{document}
+	\raggedright
+	\input{def}
+	\input{content/log}
+	\input{content/continuity}
+	\input{content/integration}
+\end{document}

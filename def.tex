@@ -1,0 +1,145 @@
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+
+%\def\deltaLow{{ \color{purple}{ \delta_{\text{low}} }}}
+%\def\deltaSup{{ \color{purple}{ \delta_{\text{sup}} }}}
+%\def\deltaHigh{{ \color{purple}{ \delta_{\text{high}} }}}
+%\def\deltaVanilla{{ \color{purple}{ \delta }}}
+%
+%\def\tHigh{{ \color{olive}{ t_{\text{high}} }}}
+%\def\tLow{{ \color{olive}{ t_{\text{low}} }}}
+%
+%\def\supremum{{ \color{RoyalBlue}{ \tilde s }}}
+%\def\SSet{{ \color{RoyalBlue}{ S }}}
+%
+%\def\myEpsilon{{ \color{black}{\epsilon }}}
+%\def\myspan{{ \color{black}{\text{span} }}}
+
+
+
+
+\def\degree{{\operatorname{deg} \,}}
+
+\newcommand{\myspan}[1]{\operatorname{span} (#1)}
+
+%Fast way to write v_1 ... v_n
+\newcommand{\oneTillN}[1]{#1_1, \dots, #1_n}
+\newcommand{\onetilln}[1]{#1_1, \dots, #1_n}
+
+%Fast way to write v_1 ... v_m
+\newcommand{\oneTillM}[1]{#1_1, \dots, #1_m}
+\newcommand{\onetillm}[1]{#1_1, \dots, #1_m}
+
+% fast way to write v_1 ... v_{#2}
+% usage \onetill{v}{k-1} yields v_1 \dots v_{k-1}
+\newcommand{\oneTill}[2]{#1_1, \dots, #1_{#2}}
+\newcommand{\onetill}[2]{#1_1, \dots, #1_{#2}}
+
+\newcommand{\kInOneTillM}{k \in \{1, \dots, m \}}
+\newcommand{\kinonetillm}{k \in \{1, \dots, m \}}
+\newcommand{\kInOneTillN}{k \in \{1, \dots, n \}}
+\newcommand{\kinonetilln}{k \in \{1, \dots, n \}}
+\newcommand{\kInOneTillP}{k \in \{1, \dots, p \}}
+\newcommand{\kinonetillp}{k \in \{1, \dots, p \}}
+
+% abreviation for finite-dimensional vector space
+\newcommand{\findimvecpac}{finite-dimensional vector space }
+\newcommand{\findimvs}{finite-dimensional vector space }
+\newcommand{\fdvs}{finite-dimensional vector space }
+
+%abreviation for linearly independent
+\newcommand{\lid}{linearly independent }
+
+%abreviation for linearly independent
+\newcommand{\ld}{linearly dependent }
+
+%abreviation for linearly independent
+\newcommand{\vs}{vector space }
+
+%abreviation for finite-dimensional
+\newcommand{\fd}{{finite-dimensional }}	
+
+%abreviation for linear map
+\newcommand{\lm}{{linear map }}	
+
+%abbreaviation for L(V,W)
+\newcommand{\lvw}{{\mathcal{L}(V,W)}}
+
+\newcommand{\linmap}{\mathcal{L}}
+\newcommand{\lin}[2]{{\mathcal{L}(#1, #2)}}
+
+\newcommand{\mynull}{\operatorname{null}}
+
+\newcommand{\myrange}{\operatorname{range}}
+
+\newcommand{\even}{\operatorname{even}}
+\newcommand{\odd}{\operatorname{odd}}
+
+%\newcommand{\mmatrix}{\mathcal{M}}
+
+% Natural numbers, integers, real numbers, complex numbers:
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{N}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\compl}{\mathbb{C}}
+\newcommand{\myF}{\mathbb{F}}
+
+% Polynomial symbol:
+\newcommand{\polyn}{\mathcal{P}}
+
+% Matrix symbol:
+\newcommand{\mmatrix}{\mathcal{M}}
+
+%\newcommand{\bfemph}[1]{{\ttfamily\fontseries{b}\selectfont #1}}
+\newcommand{\bfemph}[1]{{\fontseries{b}\selectfont #1}}
+
+%\newcommand{\basis}[2]{\overbrace{ \myspan{#1_1, \dots #1_{#2}}}^{\text{linearly independent}} }}
+
+\def\myimpl{{ \color{black}{\implies}}}
+
+
+\def\bold#1{{\bf #1}}
+
+\newtheoremstyle{mytheoremstyle} % name
+%{\topsep}                    % Space above
+{0.7em}                    % Space above
+{0em}                        % Space below
+{}                           % Body font
+{0em}                           % Indent amount
+%{\ttfamily\fontseries{b}\selectfont}                   % Theorem head font
+{\fontseries{sb}\selectfont}                   % Theorem head font
+{:\newline}                          % Punctuation after theorem head
+{.3em}                       % Space after theorem head
+{}  					     % Theorem head spec (can be left empty, meaning ‘normal’)
+
+%\theoremstyle{mytheoremstyle}
+%\newtheorem{thm}{Thm}[chapter]
+%
+%\theoremstyle{mytheoremstyle}
+%\newtheorem{mydef}{Def}[chapter]
+%
+%\theoremstyle{mytheoremstyle}
+%\newtheorem{Example}{Example}[chapter]
+
+
+%\theoremstyle{mytheoremstyle}
+%\newtheorem{thm}{Thm}[chapter]
+%
+%\theoremstyle{mytheoremstyle}
+%\newtheorem{mydef}[thm]{Def}
+%
+%\theoremstyle{mytheoremstyle}
+%\newtheorem{example}[thm]{Example}
+
+\theoremstyle{mytheoremstyle}
+\newtheorem{thm}{Theorem}[chapter]
+
+\theoremstyle{mytheoremstyle}
+\newtheorem{mydef}[thm]{Definition}
+\newtheorem*{mydef-non}{Definition}
+
+\theoremstyle{mytheoremstyle}
+\newtheorem{example}[thm]{Example}
+
+\setlength{\abovedisplayskip}{1pt}
+\setlength{\belowdisplayskip}{1pt}

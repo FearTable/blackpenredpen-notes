@@ -1,0 +1,30 @@
+\chapter{Integration}
+
+\begin{equation}
+	\int_{-1}^1 \frac{x^2}{1+2^{\sin x}}=\int_{0}^{1} x^2 dx = \frac{1}{3} 1^{3}= \frac{1}{3}
+\end{equation}
+
+\begin{thm}
+	Let $even$ be an even function and $odd$ be an odd function. And let $a,b \in \real$. Then
+	\begin{equation}
+		\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{0}^{a} \even(x) dx
+	\end{equation}
+\end{thm}
+\begin{proof}
+	Using that fact that
+
+\begin{dmath}
+	\int_{x=-a}^{x=0} \frac{\even(x)}{1+b^{\odd(x)}} dx  =
+	\int_{u=a}^{u=0} \frac{\even(-u)}{1+b^{\odd(-u)}} -du =
+	\int_{u=0}^{u=a} \frac{\even(u)}{1+b^{-\odd(u)}} \frac{b^{\odd(u)}}{b^{\odd(u)}}du \\
+	= \int_{0}^{a} \frac{b^{\odd(u)} \even(u)}{b^\odd(u)+1} du
+\end{dmath}
+
+	´We have that
+	\begin{dmath}
+	\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{-a}^{0} \frac{\even(x)}{1+b^{\odd(x)}} dx + \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx =
+	\int_{0}^{a} \frac{b^{\odd(x)} \even(x)}{b^{\odd(x)}+1} dx+ \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx=
+	\int_{0}^{a} \frac{\even(x) (b^{\odd(x)}+1)}{b^{\odd(x)}+1} dx =
+	\int_{0}^{a} \even(x) dx
+\end{dmath}
+\end{proof}

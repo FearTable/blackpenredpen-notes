@@ -1,0 +1,36 @@
+\chapter{Logarithms}
+\subsubsection*{Is this equation solvable? x\^{}ln(4)+x\^{}ln(10)=x\^{}ln(25)}
+Let us look at the equation
+\begin{equation}
+	\label{x-to-ln-power-equation}
+	x^{\ln 4 } + x^{\ln 10} = x^{\ln 25 },
+\end{equation}
+which has the trivial solution $x=0$. Note that
+\begin{equation}
+	a^{\log_b c} = \left( b ^{\log_{b} a} \right) ^ {\log _b c} = b^{\log_b a \cdot \log_b c} = \left( b^{\log_b c }\right) ^{\log_b a} = c^{\log_b a}
+\end{equation}
+
+Therefore, for $x \neq 0$, (\ref{x-to-ln-power-equation}) becomes
+\begin{align}
+	4^{\ln x} + 10^{\ln x}& = 25^{\ln x} \\
+	1 + 
+	\frac{10^{\ln x}}{4^{\ln x}} & = 
+	\frac{25^{\ln x}}{4^{\ln x}} \\
+	1 + \left( \frac{5}{2} \right)^{\ln x} &=
+	\left( \left(  \frac{5}{2} \right)^2 \right)^{\ln x} \\
+	\left( \left(  \frac{5}{2} \right)^{\ln x} \right)^2
+	-\left( \frac{5}{2} \right)^{\ln x} -1 &= 0
+\end{align}
+
+Therefore, using the midnight formula, we have
+\begin{equation}
+	\left( \frac{5}{2} \right)^{\ln x}=\frac{-(-1)\pm \sqrt{(-1)^2-4(1)(-1)}}{2(1)}=\frac{1 + \sqrt{5}}{2} \equiv \varphi,
+\end{equation}
+where $\varphi$ is the golden ratio. So
+\begin{align}
+	\log_{\frac{5}{2}} \left( \frac{5}{2} \right)^{\ln x} & =
+	\log_{\frac{5}{2}} \varphi \\
+	\ln x &= \log_{\frac{5}{2}} \varphi \\
+	e^{\ln x} &= e^{\log_{\frac{5}{2}}\varphi} \\
+	x &= e^{\log_{\frac{5}{2}}\varphi} \approx 1.691
+\end{align}
