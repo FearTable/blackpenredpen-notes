@@ -20,11 +20,80 @@
 	= \int_{0}^{a} \frac{b^{\odd(u)} \even(u)}{b^\odd(u)+1} du
 \end{dmath}
 
-	´We have that
+We have that
 	\begin{dmath}
-	\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{-a}^{0} \frac{\even(x)}{1+b^{\odd(x)}} dx + \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx =
-	\int_{0}^{a} \frac{b^{\odd(x)} \even(x)}{b^{\odd(x)}+1} dx+ \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx=
-	\int_{0}^{a} \frac{\even(x) (b^{\odd(x)}+1)}{b^{\odd(x)}+1} dx =
-	\int_{0}^{a} \even(x) dx
+  	\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{-a}^{0} \frac{\even(x)}{1+b^{\odd(x)}} dx + \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx =
+  	\int_{0}^{a} \frac{b^{\odd(x)} \even(x)}{b^{\odd(x)}+1} dx+ \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx=
+  	\int_{0}^{a} \frac{\even(x) (b^{\odd(x)}+1)}{b^{\odd(x)}+1} dx =
+  	\int_{0}^{a} \even(x) dx
 \end{dmath}
 \end{proof}
+
+\subsection{100 Integralrechnungen (Weltrekord?)}
+\begin{dmath}
+  \begin{aligned}
+    \int \tan^5 x \sec^3 x dx & = \int \tan^4 x \sec^2 \tan x \sec x dx \\
+    &= \int (\tan^2 x)^2 \sec^2 \tan x \sec x dx \\
+    &= \int (\sec^2 x-1)^2 \sec^2 \tan x \sec x dx \\
+    & \quad
+      \text{Substitution:}
+      \quad
+      \boxed{\begin{aligned}
+          u &:\equiv \sec x\\
+          du &:\equiv \sec x \tan x dx
+        \end{aligned}
+      } \\
+    &= \int (u^2-1)^2u^2du \\
+    &= \int (u^6-u^4+u^2)du \\
+    &= \frac{1}{7} \sec^2x-\frac{2}{5}\sec^5x+\frac{1}{3}\sec^2x+c \\
+  \end{aligned}
+\end{dmath}
+
+\begin{dmath}
+  \int \frac{ \cos(2x) } {\sin x + \cos x}
+  = \int \frac{ \sin^2 x + \cos^2 x } {\sin x + \cos x}
+  = \int \frac{ (\cos x - \sin x)(\cos x + \sin x)} {\sin x + \cos x}
+  = \int  (\cos x - \sin x) dx
+  = \sin x + \cos x + c
+\end{dmath}
+
+
+\begin{equation}
+    \begin{aligned}
+      \int\frac{x^2 + 1}{x^4-x^2+1}
+      &= \int \frac{1+\frac{1}{x^2}}{x^2-1+\frac{1}{x^2}} \\
+      &= \int \frac{1+(1/x^2)}{x^2-2+(1/x^2)+1} \\
+      & \quad
+        \text{Substitution:}
+        \quad
+        \boxed{\begin{aligned}
+             u &:\equiv x-\frac{1}{x} \\
+            du &:\equiv \left(1+\frac{1}{x^2}\right)dx
+              \end{aligned}
+        } \\
+      &= \int \frac{1}{u^2+1} du \\
+      &=\tan^{-1} \left(x-\frac{1}{x}\right)+c
+  \end{aligned}
+\end{equation}
+
+\begin{equation}
+  \begin{aligned}
+    \int (x+e^x)^2 dx &= \int (x^2 + 2xe^x+e^{2x}) dx \\
+    &
+      \quad
+      \text{DI-Method for $2xe^x$:}
+      \quad
+      \boxed{
+        \begin{aligned}
+          \begin{array}{ccc}
+            & D & I \\
+           +& 2x & e^x \\
+           -& 2 & e^x \\
+           +& 0 & e^x
+          \end{array}
+        \end{aligned}
+     } \\
+    & =´\frac{1}{3}x^3 + 2xe^x-2xe^x+\frac{1}{2}e^{2x}
+  \end{aligned}
+\end{equation}
+
