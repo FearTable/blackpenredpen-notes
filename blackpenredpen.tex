@@ -42,8 +42,8 @@
 }
 
 %\setcounter{secnumdepth}{0}
-%\renewenvironment{proof}{\underline{\ttfamily Proof:}}{\hfill $\Box$ \\} 
-\renewenvironment{proof}{{\fontseries{b}\selectfont Proof:}}{\hfill $\Box$ \\} 
+%\renewenvironment{proof}{\underline{\ttfamily Proof:}}{\hfill $\Box$ \\}
+\renewenvironment{proof}{{\fontseries{b}\selectfont Proof:}}{\hfill $\Box$ \\}
 
 \titlespacing{\chapter}{0pt}{6pt}{3pt}
 \titlespacing{\section}{0pt}{10pt}{3pt}
@@ -53,7 +53,7 @@
 %\titleformat*{\chapter}{\ttfamily\fontseries{b}\selectfont\large}
 
 \titleformat{\chapter}[block]
-{\fontseries{b}\selectfont\Large}{\thechapter.}{0.5em}{\fontseries{b}\selectfont\Large}
+{\fontseries{b}\selectfont\large}{\thechapter.}{0.5em}{\fontseries{b}\selectfont\Large}
 \titlespacing*{\chapter}{0pt}{-19pt}{0pt}
 
 %\titleformat*{\section}{\ttfamily\fontseries{b}\selectfont\large}
@@ -61,7 +61,7 @@
 %\titleformat*{\subsubsection}{\ttfamily\fontseries{b}\selectfont\normalsize}
 
 \titleformat*{\section}{\fontseries{b}\selectfont\large}
-\titleformat*{\subsection}{\fontseries{b}\selectfont\large}
+\titleformat*{\subsection}{\fontseries{b}\selectfont\normalsize}
 \titleformat*{\subsubsection}{\fontseries{b}\selectfont\normalsize}
 
 %\titlespacing{\chapter}{0pt}{\parskip}{-\parskip}
@@ -79,6 +79,7 @@
 \begin{document}
 	\raggedright
 	\input{def}
+    \input{content/basics}
 	\input{content/log}
 	\input{content/continuity}
 	\input{content/integration}
