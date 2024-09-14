@@ -10,24 +10,25 @@
 		\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{0}^{a} \even(x) dx
 	\end{equation}
 \end{thm}
+
 \begin{proof}
-	Using that fact that
+  Using that fact that
 
-\begin{dmath}
-	\int_{x=-a}^{x=0} \frac{\even(x)}{1+b^{\odd(x)}} dx
-  = \int_{u=a}^{u=0} \frac{\even(-u)}{1+b^{\odd(-u)}} (-1) du
-  = \int_{u=0}^{u=a} \left( \frac{\even(u)}{1+b^{-\odd(u)}} \right) \frac{b^{\odd(u)}}{b^{\odd(u)}}du \\
-  = \int_{0}^{a} \frac{b^{\odd(u)} \even(u)}{b^\odd(u)+1} du
-\end{dmath}
+  \begin{dmath}
+    \int_{x=-a}^{x=0} \frac{\even(x)}{1+b^{\odd(x)}} dx
+    = \int_{u=a}^{u=0} \frac{\even(-u)}{1+b^{\odd(-u)}} (-1) du
+    = \int_{u=0}^{u=a} \left( \frac{\even(u)}{1+b^{-\odd(u)}} \right) \frac{b^{\odd(u)}}{b^{\odd(u)}}du \\
+    = \int_{0}^{a} \frac{b^{\odd(u)} \even(u)}{b^\odd(u)+1} du
+  \end{dmath}
 
-We have that
-	\begin{dmath}
-  	\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx
+  We have that
+  \begin{dmath}
+    \int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx
     = \int_{-a}^{0} \frac{\even(x)}{1+b^{\odd(x)}} dx + \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx
     = \int_{0}^{a} \frac{b^{\odd(x)} \even(x)}{b^{\odd(x)}+1} dx+ \int_{0}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx
     = \int_{0}^{a} \frac{\even(x) (b^{\odd(x)}+1)}{b^{\odd(x)}+1} dx =
-  	\int_{0}^{a} \even(x) dx
-\end{dmath}
+    \int_{0}^{a} \even(x) dx
+  \end{dmath}
 \end{proof}
 
 \subsection*{100 Integralrechnungen (Weltrekord?)}
@@ -108,7 +109,7 @@ We have that
               \end{array}
             \end{aligned}
           } \\
-        & =´\frac{1}{3}x^3 + 2xe^x-2e^x+\frac{1}{2}e^{2x}
+        & = \frac{1}{3}x^3 + 2xe^x-2e^x+\frac{1}{2}e^{2x}
       \end{aligned}
     \end{equation}
     \bigbreak
@@ -139,6 +140,7 @@ We have that
     \bigbreak
     \hrule
     \bigbreak
+  %enditem
 
   \item
     \begin{equation}
@@ -170,13 +172,14 @@ We have that
     \bigbreak
     \hrule
     \bigbreak
+  %ENDITEM
 
   \item
     \begin{equation}
-        \int \frac{1}{\sqrt{e^x}} \,dx
-         = \int \frac{1}{e^{\frac{x}{2}}} \, dx
-         = \int e^{-\frac{x}{2}} \, dx
-         = -2 e^{-\frac{x}{2}} = \frac{-2}{\sqrt{e^x}}+c
+      \int \frac{1}{\sqrt{e^x}} \,dx
+       = \int \frac{1}{e^{\frac{x}{2}}} \, dx
+       = \int e^{-\frac{x}{2}} \, dx
+       = -2 e^{-\frac{x}{2}} = \frac{-2}{\sqrt{e^x}}+c
     \end{equation}
 
 \end{enumerate}
