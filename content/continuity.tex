@@ -1,86 +1,119 @@
 \chapter{Continuity}
 \subsubsection*{Proving x^{}2 is continuous but NOT uniformly continuous on (-inf, inf)}
-We could show that $f(x)=x^2$ is not uniformly continous on $(-\infty, \infty) = \real$ using the following theorem:
+We could show that $f(x)=x^{2}$ is not uniformly continous on $(-\infty, \infty)
+= \real$ using the following theorem:
 
 \begin{thm}
-	\label{unbounded-derivative-implies-not-uniformly-continous}
-	$\lim_{x \to \infty} f'(x) = \infty$ $\implies$ $f$ is not uniformly continous.
+  \label{unbounded-derivative-implies-not-uniformly-continous} $\lim_{x \to
+    \infty}f'(x) = \infty$ $\implies$ $f$ is not uniformly continous.
 \end{thm}
-We have that $f'(x)=2x$ is not bounded. But we will not use (\ref{unbounded-derivative-implies-not-uniformly-continous}) here.
+We have that $f'(x)=2x$ is not bounded. But we will not use (\ref{unbounded-derivative-implies-not-uniformly-continous})
+here.
 
 \begin{mydef}
-	\label{definition-of-continouity}
-	$f$ is continuous on $I$ means 
-	\begin{equation}
-		\forall a \in I, \forall \epsilon > 0, \exists \delta > 0, \forall x \in I : | x-a | < \delta \implies |f(x) - f(a)| < \epsilon
-	\end{equation}
+  \label{definition-of-continouity} $f$ is continuous on $I$ means
+  \begin{equation}
+    \forall a \in I, \forall \epsilon > 0, \exists \delta > 0, \forall x \in I :
+    | x-a | < \delta \implies |f(x) - f(a)| < \epsilon
+  \end{equation}
 \end{mydef}
 
 \begin{mydef}
-	\label{definition-of-uniform-continouity}
-	$f$ is uniformly continous on $I$ means 
-	\begin{equation}
-		\forall \epsilon > 0, \exists \delta > 0, \forall x_1, x_2 \in I: |x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \epsilon
-	\end{equation}
+  \label{definition-of-uniform-continouity} $f$ is uniformly continous on $I$ means
+  \begin{equation}
+    \forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in I: |x_{1}-
+    x_{2}| < \delta \implies |f(x_{1}) - f(x_{2})| < \epsilon
+  \end{equation}
 \end{mydef}
 
 \begin{mydef}
-	\label{definition-of-non-uniform-continouity}
-	$f$ is not uniformly continous on $I$ means
-	\begin{equation}
-		\label{equation-of-non-uniform-continouity}
-		\begin{aligned}
-			\exists \epsilon > 0, \forall \delta > 0, \exists x_1, x_2 \in I:
-			&|x_1 - x_2| < \delta \\
-			\text{ ``but" \slash $\,$ ``and at the same time"}: 
-			& |f(x_1)- f(x_2)| \geq \epsilon
-		\end{aligned}
-	\end{equation}
-One can use predicate logic to show that this is the negation of the Definition \ref{definition-of-uniform-continouity}.
+  \label{definition-of-non-uniform-continouity} $f$ is not uniformly continous on
+  $I$ means
+  \begin{equation}
+    \label{equation-of-non-uniform-continouity}
+    \begin{aligned}
+      \exists \epsilon > 0, \forall \delta > 0, \exists x_{1}, x_{2} \in I: & |x_{1} - x_{2}| < \delta           \\
+      \text{ ``but" \slash $\,$ ``and at the same time"}:                   & |f(x_{1})- f(x_{2})| \geq \epsilon
+    \end{aligned}
+  \end{equation}
+  One can use predicate logic to show that this is the negation of the Definition
+  \ref{definition-of-uniform-continouity}.
 \end{mydef}
 
-With these definitions we want to show that $x^2$ is uniformly continous on $[0,1]$ but not uniformly continous on $\real$
+With these definitions we want to show that $x^{2}$ is uniformly continous on $[0
+,1]$ but not uniformly continous on $\real$
 
 \begin{thm}
-	$f(x)=x^2$ is uniformly continous on $[0,1]$.
+  $f(x)=x^{2}$ is uniformly continous on $[0,1]$.
 \end{thm}
 \begin{proof}
-	Given $\epsilon > 0$. Lets choose a $\delta>0$ we don't know yet. So $\delta :\equiv \boxed{\color{white}\epsilon/2}$. Let $x_1, x_2 \in [0,1]$. Suppose $|x_1-x_2| < \delta$. We can see that \begin{equation}
-		\label{expanded-x1pow2-minus-x2pow2}
-		|x_1^2 - x_2^2| = |(x_1 - x_2)(x_1+x_2)| = |x_1 - x_2||x_1+x_2| < \delta |x_1+x_2| \leq \delta 2 
-	\end{equation}
-	So for a given $\epsilon$ we choose $\delta :\equiv \boxed{\epsilon/2}$. \\
-	Then we have $|(f(x_1)-f(x_2)| \leq |x_1^2 - x_2^2| \leq 2\cdot \delta  = \epsilon \quad \forall x_1, x_2 \in [0,1]$.\\
-	So $f(x)=x^2$ is uniformly continuous on $[0,1]$.
+  Given $\epsilon > 0$. Lets choose a $\delta>0$ we don't know yet. So $\delta :\equiv
+  \boxed{\color{white}\epsilon/2}$. Let $x_{1}, x_{2} \in [0,1]$. Suppose $|x_{1}
+  -x_{2}| < \delta$. We can see that
+  \begin{equation}
+    \label{expanded-x1pow2-minus-x2pow2}|x_{1}^{2} - x_{2}^{2}| = |(x_{1} - x_{2}
+    )(x_{1}+x_{2})| = |x_{1} - x_{2}||x_{1}+x_{2}| < \delta |x_{1}+x_{2}| \leq \delta
+    2
+  \end{equation}
+  So for a given $\epsilon$ we choose $\delta :\equiv \boxed{\epsilon/2}$. \\ Then
+  we have $|(f(x_{1})-f(x_{2})| \leq |x_{1}^{2} - x_{2}^{2}| \leq 2\cdot \delta =
+  \epsilon \quad \forall x_{1}, x_{2} \in [0,1]$.\\ So $f(x)=x^{2}$ is uniformly
+  continuous on $[0,1]$.
 \end{proof}
 
 \begin{thm}
-	$f(x)=x^2$ is not uniformly continuous on $\real$.
+  $f(x)=x^{2}$ is not uniformly continuous on $\real$.
 \end{thm}
 \begin{proof}
-	Looking at the definition \ref{definition-of-non-uniform-continouity} with it's equation (\ref{equation-of-non-uniform-continouity}) we can choose $\epsilon>0$ as well as $x_1, x_2 \in \real$ freely. So let $\epsilon : \equiv 1$. So given any $\delta > 0 $ we have to pick $x_1, x_2 \in \real$ such that $|x_1-x_2|<\delta$ and at the same time $|x_1^2-x_2^2|\geq1=\epsilon$. So let again $|x_1^2-x_2^2|=|x_1^2-x_2^2||x_1^2+x_2^2|$ like in (\ref*{expanded-x1pow2-minus-x2pow2}) . If we pick $x_1 :\equiv\frac{\delta}{2}, x_2 :\equiv 0$ we will end up with $|x_1^2-x_2^2|= \delta^2/4´$ which will not be $\geq 1$ for any given $\delta>0$. Similarly, if we pick $x_1 : \equiv \delta + \frac{\delta}{2}, x_2 :\equiv \delta$ we will end up with $|x_1^2-x_2^2|= (\delta/2)((5\delta)/2)=(5\delta^2)/2$ which will not be $\geq 1$ for any given $\delta>0$.
-	Finally, if we pick $x_1 : \equiv \frac{1}{\delta} + \frac{\delta}{2} \in \real, x_2 :\equiv \frac{1}{\delta} \in \real$ we will end up with $|x_1^2-x_2^2|= \frac{\delta}{2} (\frac{2}{\delta}+\frac{\delta}{2})=1+\delta^2/4$ which will  be $\geq 1=\epsilon$ for any given $\delta>0$. So $f(x)=x^2$ is not uniformly continuous on $\real$
+  Looking at the definition \ref{definition-of-non-uniform-continouity} with it's
+  equation (\ref{equation-of-non-uniform-continouity}) we can choose $\epsilon>0$
+  as well as $x_{1}, x_{2} \in \real$ freely. So let $\epsilon : \equiv 1$. So given
+  any $\delta > 0$ we have to pick $x_{1}, x_{2} \in \real$ such that $|x_{1}-x_{2}
+  |<\delta$ and at the same time $|x_{1}^{2}-x_{2}^{2}|\geq1=\epsilon$. So let
+  again $|x_{1}^{2}-x_{2}^{2}|=|x_{1}^{2}-x_{2}^{2}||x_{1}^{2}+x_{2}^{2}|$ like
+  in (\ref*{expanded-x1pow2-minus-x2pow2}) . If we pick
+  $x_{1} :\equiv\frac{\delta}{2}, x_{2} :\equiv 0$ we will end up with
+  $|x_{1}^{2}-x_{2}^{2}|= \delta^{2}/4´$ which will not be $\geq 1$ for any
+  given $\delta>0$. Similarly, if we pick
+  $x_{1} : \equiv \delta + \frac{\delta}{2}, x_{2} :\equiv \delta$ we will end
+  up with $|x_{1}^{2}-x_{2}^{2}|= (\delta/2)((5\delta)/2)=(5\delta^{2})/2$ which
+  will not be $\geq 1$ for any given $\delta>0$. Finally, if we pick
+  $x_{1} : \equiv \frac{1}{\delta}+ \frac{\delta}{2}\in \real, x_{2} :\equiv \frac{1}{\delta}
+  \in \real$
+  we will end up with
+  $|x_{1}^{2}-x_{2}^{2}|= \frac{\delta}{2}(\frac{2}{\delta}+\frac{\delta}{2})=1+\delta
+  ^{2}/4$
+  which will be $\geq 1=\epsilon$ for any given $\delta>0$. So $f(x)=x^{2}$ is not
+  uniformly continuous on $\real$
 \end{proof}
 
 \pagebreak
 
 \begin{thm}
-	$f(x)=x^2$ is continuous on $\real$
+  $f(x)=x^{2}$ is continuous on $\real$
 \end{thm}
 \begin{proof}
-	We must show that $\lim_{x \to a} x^2 = a^2 \quad \forall a\in \real$. Given $\epsilon >0, a\in \real.$ \\
-	Choose $\delta = \boxed{\color{white}\min \left\{1, \frac{\epsilon}{1+2|a|}\right\}}$ we dont know yet. Let $x\in \real$ be arbitrary. Suppose $0<|x-a|<\delta$. Then we have 
-	\begin{dmath}
-		|x^2-a^2|=|x-a||x+a|<\delta|x+a|. 
-	\end{dmath}
-	If we would choose $\delta$ to be $\leq 1$ to begin with, we would have \begin{dmath}
-		|x+a| = |x-a+2a| \leq |x-a| + |2a| < 1 + |2a´|.
-	\end{dmath} So we have
-	\begin{equation}
-		|x^2-a^2| < \delta (1+2|a|)
-	\end{equation} 
-	If we choose $\delta = \boxed{\min \left\{1, \frac{\epsilon}{1+2|a|}\right\}}$, we have
-	\begin{dmath}
-		|x^2-a^2| < \delta (1+2|a|) \leq \frac{\epsilon}{1+2|a|} (1+2|a|) = \epsilon
-	\end{dmath}
+  We must show that $\lim_{x \to a}x^{2} = a^{2} \quad \forall a\in \real$.
+  Given $\epsilon >0, a\in \real.$ \\ Choose
+  $\delta = \boxed{\color{white}\min \left\{1, \frac{\epsilon}{1+2|a|}\right\}}$
+  we dont know yet.
+
+  Let $x\in \real$ be arbitrary. Suppose $0<|x-a|<\delta$. Then
+  we have
+  \begin{dmath}
+    |x^2-a^2|=|x-a||x+a|<\delta|x+a|.
+  \end{dmath}
+  If we would choose $\delta$ to be $\leq 1$ to begin with, we would have
+  \begin{dmath}
+    |x+a| = |x-a+2a| \leq |x-a| + |2a| < 1 + |2a´|.
+  \end{dmath}
+  So we have
+  \begin{equation}
+    |x^{2}-a^{2}| < \delta (1+2|a|)
+  \end{equation}
+  If we choose $\delta = \boxed{\min \left\{1, \frac{\epsilon}{1+2|a|}\right\}}$,
+  we have
+  \begin{dmath}
+    |x^2-a^2| < \delta (1+2|a|) \leq \frac{\epsilon}{1+2|a|} (1+2|a|) = \epsilon
+  \end{dmath}
 \end{proof}

@@ -1,13 +1,73 @@
 \chapter{Integration}
+\subsection{Integral of sin(x)*cos^{}3(x) vs integral of sin^{}2(x)*cos^{}3(x), calculus 2 tutorial}
+\url{https://www.youtube.com/watch?v=2uQVW0LqCgw}
+
+Using the following substitution
 
 \begin{equation}
-	\int_{-1}^1 \frac{x^2}{1+2^{\sin x}}=\int_{0}^{1} x^2 dx = \frac{1}{3} 1^{3}= \frac{1}{3}
+  \boxed{
+    \begin{aligned}
+      u &= \cos x \\
+      du &= -\sin x \dx \\
+      dx &= \frac{du}{-\sin \dx}
+    \end{aligned}
+  }
+\end{equation}
+
+We have that
+
+\begin{equation}
+\int \sin x \cos^3 x \dx = \int \sin x u^3 \frac{du}{-\sin x}=-\int u^3 \du´= - \frac{1}{4} \cos^4 x + c
+\end{equation}
+
+For the next example, we use the Pythagorean identity ($\sin^2 \theta + \cos^2 \theta = 1$):
+
+\begin{equation}
+  \begin{aligned}
+    \int \sin^2 x \cos^3 x \dx
+    &= \int \sin^2 x \cos^2 x \cos x \dx \\
+    &= \int \sin^2 x (1-\sin^2x) \cos x \dx \\
+    &= \int (sin^2 x - \sin^4 x) \cos x \dx \\
+    & \qquad
+    \text{Substitution:}
+    \quad
+    \boxed{
+      \begin{aligned}
+        u &= \sin x \\
+        du &= \cos x \dx \\
+        dx &= \frac{du}{\cos x}
+      \end{aligned}
+    } \\
+    &= \int (u^2 - u^4) du \\
+    &= \frac{1}{3}u^3 - \frac{1}{5}u^5 \\
+    &= \frac{1}{3}\sin^3 x - \frac{1}{5}\sin^5 x + c
+  \end{aligned}
+\end{equation}
+
+\subsection{Integral of cos^{}2(theta) from 0 to pi/2, calculus 2 tutorial}
+\url{https://www.youtube.com/watch?v=hXsmC8i-oTk}
+
+\begin{equation}
+  \begin{aligned}
+      \int_0^{\pi/2}\cos \theta \, d\theta
+    &= \frac{1}{2} \int_0^{\pi/2} 1+\cos(2 \theta) \, d\theta \\
+    &= \left. \frac{1}{2}\left(\theta + \frac{1}{2} \sin (2\theta)\right) \right]_{0}^{\pi/2} \\
+    &= \frac{1}{2} \left( \left( \frac{\pi}{2} + \frac{1}{2} \sin \left(2 \cdot \frac{\pi}{2} \right) \right)- \left(0+\frac{1}{2} \sin (2\cdot 0) \right) \right)
+    = \frac{\pi}{4}
+  \end{aligned}
+\end{equation}
+
+\subsection{calculus integral trick with even \& odd function}
+\url{https://www.youtube.com/watch?v=gK8Wf9ZkZW4}
+
+\begin{equation}
+  \int_{-1}^1 \frac{x^2}{1+2^{\sin x}}=\int_{0}^{1} x^2 dx = \frac{1}{3} 1^{3}= \frac{1}{3}
 \end{equation}
 
 \begin{thm}
-	Let $\even: \real \to \real $ be an even function and $\odd: \real \to \real$ be an odd function. And let $a,b \in \real$. Then
-	\begin{equation}
-		\int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{0}^{a} \even(x) dx
+  Let $\even: \real \to \real $ be an even function and $\odd: \real \to \real$ be an odd function. And let $a,b \in \real$. Then
+  \begin{equation}
+    \int_{-a}^{a} \frac{\even(x)}{1+b^{\odd(x)}} dx = \int_{0}^{a} \even(x) dx
 	\end{equation}
 \end{thm}
 
@@ -150,7 +210,7 @@
         \text{Substitution:}
         \quad
         \boxed{\begin{aligned}
-            u &:\equiv \sin x \\
+            u  &:\equiv \sin x \\
             du &: \equiv \cos x \, dx
           \end{aligned}
         } \\
@@ -169,17 +229,22 @@
       \end{aligned}
     \end{equation}
     Which implies that $a_1 = \frac{1}{7}$ and $a_2 = -\frac{1}{7}$ and therefore $\frac{1}{u^2-5u-6}=\frac{1}{(u-6)(u+1)}=\frac{1/7}{u-6}+\frac{-1/7}{u+1}$
+
+    Whith the \textbf{``cover up method"}, we can be even faster. We have \\
+    \begin{equation}
+      a_1 = \frac{1}{6+1} = \frac{1}{7} \myand a_2 = \frac{1}{-1-6} = \frac{1}{-7}
+    \end{equation}
     \bigbreak
     \hrule
     \bigbreak
   %ENDITEM
 
   \item
-    \begin{equation}
-      \int \frac{1}{\sqrt{e^x}} \,dx
-       = \int \frac{1}{e^{\frac{x}{2}}} \, dx
-       = \int e^{-\frac{x}{2}} \, dx
-       = -2 e^{-\frac{x}{2}} = \frac{-2}{\sqrt{e^x}}+c
-    \end{equation}
+  \begin{equation}
+    \int \frac{1}{\sqrt{e^x}} \,dx
+     = \int \frac{1}{e^{\frac{x}{2}}} \, dx
+     = \int e^{-\frac{x}{2}} \, dx
+     = -2 e^{-\frac{x}{2}} = \frac{-2}{\sqrt{e^x}}+c
+  \end{equation}
 
 \end{enumerate}
